@@ -4,14 +4,18 @@
   "description": "server side microservice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "author": "Arun Kumar Nair",
   "license": "ISC",
   "dependencies": {
+    "@grpc/proto-loader": "^0.1.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "grpc": "^1.24.3",
+    "lodash": "^4.6.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
