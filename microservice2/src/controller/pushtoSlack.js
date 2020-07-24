@@ -6,8 +6,7 @@ module.exports.pushtoSlack = (msg) => {
   console.log(msg);
   axios({
     method: "POST",
-    url:
-      "https://hooks.slack.com/services/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",
+    url: process.env.SLACK_WEBHOOK,
     data: {
       text: msg,
     },
