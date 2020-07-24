@@ -11,5 +11,6 @@ message Request {
 }
 
 message Response {
-    string res = 1;
+    int32 code = 1;
+    string status = 2;
 }

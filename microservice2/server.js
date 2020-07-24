@@ -1,3 +1,12 @@
+require("dotenv").config();
+const Messages = require("./src/models/messageSchema");
+// connection to datbase
+const db = require("./src/utils/DBconfig");
+db.connect();
+
+const runmessage = require("./src/controller/runMessage");
+
+// gRPC server
 const PROTO_PATH = __dirname + "/grpc.proto";
 var grpc = require("grpc");
 var protoLoader = require("@grpc/proto-loader");
@@ -12,14 +21,8 @@ var packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 });
 var messenger_proto = grpc.loadPackageDefinition(packageDefinition).messenger;
 
-function runMessage(Request) {
-  console.log(Request);
-  let Response = { res: "recieved" };
-  return Response;
-}
-
 function TransferMsg(call, callback) {
-  callback(null, runMessage(call.request));
+  callback(null, runmessage.runMessage(call.request));
 }
 
 function getServer() {
