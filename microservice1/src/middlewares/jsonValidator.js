@@ -1,6 +1,10 @@
 const { body, validationResult } = require("express-validator");
 const userValidationRules = () => {
-  return [body().notEmpty(), body("message").notEmpty().isString()];
+  return [
+    body().notEmpty(),
+    body("message").notEmpty().isString(),
+    body("web_hook").notEmpty().isString(),
+  ];
 };
 
 const validate = (req, res, next) => {

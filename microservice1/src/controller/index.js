@@ -17,8 +17,8 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 const messenger_proto = grpc.loadPackageDefinition(packageDefinition).messenger;
 
 module.exports.messenger = (req, res) => {
-  var Request = { msg: req.body.message };
-  var HOST = req.body.grpc_server;
+  var Request = { hook: req.body.web_hook, msg: req.body.message };
+  var HOST = "18.218.137.35:50051";
 
   // create Stub
   const client = new messenger_proto.PushMsg(
