@@ -12,7 +12,7 @@ module.exports.pushtoSlack = (msg) => {
     },
   })
     .then((res) => {
-      console.log(res);
+      console.log("posted to slack...");
     })
     .catch((err) => {
       console.log(err);
