@@ -5,7 +5,7 @@ const PushtoSlack = require("./pushtoSlack");
 
 module.exports.runMessage = (Request) => {
   PushtoDB.pushtoDB(Request);
-  PushtoSlack.pushtoSlack(Request.msg);
+  PushtoSlack.pushtoSlack(Request);
   var Response = { code: 200, status: "recieved by gRPC server" };
   return Response;
 };

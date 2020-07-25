@@ -2,13 +2,12 @@
 
 const axios = require("axios");
 
-module.exports.pushtoSlack = (msg) => {
-  console.log(msg);
+module.exports.pushtoSlack = (Request) => {
   axios({
     method: "POST",
-    url: process.env.SLACK_WEBHOOK,
+    url: Request.hook,
     data: {
-      text: msg,
+      text: Request.msg,
     },
   })
     .then((res) => {

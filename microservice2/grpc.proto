@@ -7,7 +7,8 @@ service PushMsg {
 }
 
 message Request {
-    string msg = 1;
+    string hook = 1;
+    string msg = 2;
 }
 
 message Response {
