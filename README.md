@@ -20,7 +20,7 @@ A project on gRPC implementation for microservices
 ### Installation
 
 1. Install [nodejs](https://nodejs.org/en/).
-2. Install [MongoDB](https://www.mongodb.com/) or try [MongoDB Cloud].(https://www.mongodb.com/cloud/atlas)
+2. Install [MongoDB](https://www.mongodb.com/) or try [MongoDB Cloud](https://www.mongodb.com/cloud/atlas).
 3. Clone project repository.
    `git clone https://github.com/arunnair018/DigiRetail`
 4. Inside the microservice2 directory, create a new file with name " .env ". add following configuration to the file.
@@ -40,7 +40,7 @@ WEB_HOOK=<WEBHOOK URL>
 
 - Open a terminal in each microservice directory and run command `npm run dev`
 
-### Test Working
+### Let's test it
 
 ##### Using POSTMAN
 
@@ -87,4 +87,4 @@ You can [join my workspace](https://join.slack.com/t/nair018/shared_invite/zt-g3
 ### Or you can create your own demo app
 
 Create your own [demo app](https://api.slack.com/apps/) in slack, generate a webhook for your channel or group.
-Provide the webhook in my demo website to ping the message in your channel :smile:
+Provide the webhook in my demo website to ping the message in your channel :smile:.
