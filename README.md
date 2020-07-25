@@ -5,9 +5,9 @@ A project on gRPC implementation for microservices
 ## Problem Statement
 
 1. Develop 2 microservices (any language) that communicates with one another using gRPC.
-2. Lets say:
-   a. 1st Microservice: M1
-   b. 2nd Microservice: M2
+2. Lets say:  
+   a. 1st Microservice: M1  
+   b. 2nd Microservice: M2  
 3. M1 is a client facing microservice that exposes a simple REST endpoint to input a message from the user in JSON format.
 4. M1 then relays the received message to M2 by communicating over gRPC.
 5. M2 then stores this message either in a local storage (say file based storage) or uses a remote database. (either one is ok)
@@ -49,8 +49,8 @@ API Endpoint
 - url: `http://localhost:6000/message`
 - method: `POST`
 - body:
-  _ Content-type: application/json
-  _ payload
+  - Content-type:`application/json`
+  - payload
   `{ "message":"sample" }`
 
 ##### Using NodeJs code
@@ -82,9 +82,35 @@ axios(config)
 ### Try using my workspace
 
 The demo app is integrated in my workspace to a channel "full-stack-development".
-You can [join my workspace](https://join.slack.com/t/nair018/shared_invite/zt-g3ej1fgl-ABb6hrHTV0tFh3CNoOzp0g) and start sending messages using my demo website.
+You can [join my workspace](https://join.slack.com/t/nair018/shared_invite/zt-g3ej1fgl-ABb6hrHTV0tFh3CNoOzp0g) and start sending messages using my [demo website](http://3.16.57.252/).
 
 ### Or you can create your own demo app
 
 Create your own [demo app](https://api.slack.com/apps/) in slack, generate a webhook for your channel or group.
-Provide the webhook in my demo website to ping the message in your channel :smile:.
+Provide the webhook in my [demo website](http://3.16.57.252/) to ping the message in your channel :smile:.
+
+### Using POSTMAN
+* url: ``http://3.16.57.252:5000/message``
+* method: ``POST``
+* body: 
+	* Content-type: application/json
+	* payload
+	```
+	{
+	"web_hook":"<WEBHOOK URL>"
+	"message":"sample"
+	}
+	```
+#### live demo setup 
+* Microservice1: Amazon aws EC2
+* MIcroservice2: Amazon aws EC2
+* Database: MongoDB Atlas Cloud 
+   
+## Snapshots
+* Demo website to send message.
+![alt text](https://github.com/arunnair018/media/blob/master/web.png)
+* MongoDB Atlas cloud database to store messages
+![alt text](https://github.com/arunnair018/media/blob/master/db.png)
+* Slack channel recieving message
+![alt text](https://github.com/arunnair018/media/blob/master/slack.png)
+
