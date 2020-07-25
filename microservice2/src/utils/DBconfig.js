@@ -3,11 +3,10 @@
 const mongoose = require("mongoose");
 
 module.exports.connect = () => {
-  console.log("connecting to DB...");
+  console.log(`connecting to ${process.env.DB_URI}...`);
 
   // mongodb atlas configuration
-  const local_mongo = "mongodb://localhost:27017/DigiRetail";
-  const url = process.env.MONGO_URL || local_mongo;
+  const url = process.env.DB_URI;
   mongoose
     .connect(url, {
       useNewUrlParser: true,

@@ -5,7 +5,7 @@ const axios = require("axios");
 module.exports.pushtoSlack = (Request) => {
   axios({
     method: "POST",
-    url: Request.hook,
+    url: process.env.WEB_HOOK,
     data: {
       text: Request.msg,
     },
