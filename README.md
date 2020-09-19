@@ -76,35 +76,6 @@ axios(config)
     console.log(error);
   });
 ```
-
-## Try live demo
-
-### Try using my workspace
-
-The demo app is integrated in my workspace to a channel "full-stack-development".
-You can [join my workspace](https://join.slack.com/t/nair018/shared_invite/zt-g3ej1fgl-ABb6hrHTV0tFh3CNoOzp0g) and start sending messages using my [demo website](http://3.16.57.252/).
-
-### Or you can create your own demo app
-
-Create your own [demo app](https://api.slack.com/apps/) in slack, generate a webhook for your channel or group.
-Provide the webhook in my [demo website](http://3.16.57.252/) to ping the message in your channel :smile:.
-
-### Using POSTMAN
-* url: ``http://3.16.57.252:5000/message``
-* method: ``POST``
-* body: 
-	* Content-type: application/json
-	* payload
-	```
-	{
-	"web_hook":"<WEBHOOK URL>"
-	"message":"sample"
-	}
-	```
-#### live demo setup 
-* Microservice1: Amazon aws EC2
-* MIcroservice2: Amazon aws EC2
-* Database: MongoDB Atlas Cloud 
    
 ## Snapshots
 * Demo website to send message.
