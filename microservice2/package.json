@@ -19,7 +19,7 @@
     "grpc": "^1.24.3",
     "lodash": "^4.6.1",
     "mongoose": "^5.9.25",
-    "morgan": "^1.10.0"
+    "morgan": "^1.12.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
