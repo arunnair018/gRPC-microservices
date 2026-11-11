@@ -18,7 +18,7 @@
     "express": "^4.17.1",
     "grpc": "^1.24.3",
     "lodash": "^4.6.1",
-    "mongoose": "^5.9.25",
+    "mongoose": "^6.13.12",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
